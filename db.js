@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   ssl: true,
-  serverApi: "1",
+  tlsInsecure: true,
 })
 
 //get the default connection
