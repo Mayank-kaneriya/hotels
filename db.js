@@ -9,7 +9,9 @@ require('dotenv').config();
 //setup mongodb connection
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  ssl: true,
+  serverApi: "1",
 })
 
 //get the default connection
