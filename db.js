@@ -3,11 +3,11 @@ require('dotenv').config();
 
 //const mongoURL = 'mongodb://127.0.0.1:27017/hotels'; //hotels is database name and this is for local database which runs on  my computer
 
-const mongoURL = process.env.MongoDbURL;
+//const mongoURL = process.env.MONGO_URI;
 
 
 //setup mongodb connection
-mongoose.connect(mongoURL, {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
